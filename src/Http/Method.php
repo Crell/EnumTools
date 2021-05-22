@@ -90,6 +90,10 @@ enum Method: string
     // RFC3253, Section 3.5
     case VERSION_CONTROL = 'VERSION-CONTROL';
 
+    // These are quasi-official, as they're defined by the HTCPCP RFC.
+    case BREW = 'BREW';
+    case WHEN = 'WHEN';
+
     /**
      * Determines if this method is considered safe.
      *
@@ -102,7 +106,7 @@ enum Method: string
     {
         return match ($this) {
             self::GET, self::HEAD, self::OPTIONS, self::PRI, self::PROPFIND, self::REPORT, self::SEARCH, self::TRACE => true,
-            default => false;
+            default => false,
         };
     }
 
