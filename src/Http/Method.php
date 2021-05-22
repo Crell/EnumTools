@@ -3,6 +3,11 @@ declare(strict_types=1);
 
 namespace Crell\EnumTools\Http;
 
+/**
+ * Enumeration of all official HTTP methods as registered with IANA.
+ *
+ * @see http://www.iana.org/assignments/http-methods/http-methods.xhtml
+ */
 enum Method: string
 {
     // RFC3744, Section 8.1
